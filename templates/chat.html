@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block title %}Chat App{% endblock %}
+
+{% block content %}
+    <div id="root"></div>
+
+    <script type="text/babel" src="{{ url_for('static', filename='script/Message.js') }}"></script>
+    <script type="text/babel" src="{{ url_for('static', filename='script/Chat.js') }}"></script>
+    <script type="text/babel" src="{{ url_for('static', filename='script/ChatElem.js') }}"></script>
+    <script type="text/babel" src="{{ url_for('static', filename='script/MessageDiv.js') }}"></script>
+    <script type="text/babel" src="{{ url_for('static', filename='script/Header.js') }}"></script>
+    <script type="text/babel" src="{{ url_for('static', filename='script/ChatApp.js') }}"></script>
+
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<ChatApp isUserLogged={undefined} />);
+    </script>
+{% endblock %}

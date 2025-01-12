@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block content %}
+    <div id="root"></div>
+
+    <!-- JS import -->
+    <script type="text/babel" src="{{ url_for('static', filename='script/Header.js') }}"></script>
+    <script type="text/babel" src="{{ url_for('static', filename='script/Profile.js') }}"></script>
+    
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<Profile />);
+    </script>
+{% endblock %}

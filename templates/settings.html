@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+    <div id="root"></div>
+
+    <!-- JS import -->
+    <script type="text/babel" src="{{ url_for('static', filename='script/Header.js') }}"></script>
+
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(
+            <div>
+                <Header isUserLogged={true} />
+            </div>
+        );
+    </script>
+{% endblock %}
